@@ -13,19 +13,19 @@ services:
     env_file:
       - .env
   backend:
-    build: ./backend/
+    image: kaluginpeter/kittygram_backend
     env_file: .env
     volumes:
       - media:/app/media
       - static:/static
   frontend:
     env_file: .env
-    build: ./frontend/
+    image: kaluginpeter/kittygram_frontend
     command: cp -r /app/build/. /static/
     volumes:
       - static:/static
   gateway:
-    build: ./nginx/
+    image: kaluginpeter/kittygram_gateway
     env_file: .env
     ports:
       - 9000:80
