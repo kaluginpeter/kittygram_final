@@ -171,8 +171,8 @@ jobs:
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: |
          Hi! Deploy successfully ended!
-         (github.actor) making push.
+         ${{ github.actor }} making push.
          Commit message:
-         (github.event.commits[0].message)
+         ${{ github.event.commits[0].message }}
          You can see at commit, here is a link:
          https://github.com/${{ github.repository }}/commit/${{github.sha}}
