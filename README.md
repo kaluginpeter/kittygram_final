@@ -20,14 +20,23 @@ docker compose up
 ```
 4) Done!
 ### How to add .env file
+
 POSTGRES_USER=name_user_for_postgres (only for production)
+
 POSTGRES_PASSWORD=password_for_postgres (only for production)
+
 POSTGRES_DB=name_of_db (only for production)
+
 DB_HOST=name_of_postgres_db (for docker network connection) (only for production)
+
 DB_PORT=5432 for connecting Backend Container
+
 SECRET_KEY=project_secret_key
+
 DEVELOPMENT=False boolean (Set to False for production otherwise True)
+
 HOSTS_ALLOWED='localhost' (write a allowed hosts SEPARATED BY SINGE WHITESPACE)
+
 ### Author
 @kaluginpeter
 ## Как проверить работу с помощью автотестов
