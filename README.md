@@ -35,6 +35,8 @@ SECRET_KEY=project_secret_key
 
 DEVELOPMENT=False boolean (Set to False for production otherwise True)
 
+POSTGRES_DATABASE=True boolean (Set to False for using SQLite)
+
 HOSTS_ALLOWED='localhost' (write a allowed hosts SEPARATED BY SINGE WHITESPACE)
 
 ### Author
