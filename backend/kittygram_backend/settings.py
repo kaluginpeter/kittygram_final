@@ -56,14 +56,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'kittygram_backend.wsgi.application'
 
-if os.getenv('DEVELOPMENT'):
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
-else:
+if os.getenv('POSTGRES_DATABASE'):
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
@@ -72,6 +65,13 @@ else:
             'PASSWORD': os.getenv('POSTGRES_PASSWORD', ''),
             'HOST': os.getenv('DB_HOST', ''),
             'PORT': os.getenv('DB_PORT', 5432)
+        }
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
 
